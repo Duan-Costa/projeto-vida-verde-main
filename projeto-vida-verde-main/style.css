@@ -1,0 +1,1019 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Lobster&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ESTILO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --cor-primaria: #1c300f;
+    --cor-secundaria: #2c4918;
+    --cor-terciaria: aliceblue;
+    --cor-quartenaria: #9abe82;
+
+}
+
+body {
+    background-color: var(--cor-terciaria);
+}
+
+/*HEADER*/
+.container-header {
+    background-color: var(--cor-terciaria);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: 80px;
+    padding: 12px;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+}
+
+.img-logo img {
+    width: 120px;
+}
+
+.descriçao-logo {
+    text-align: center;
+}
+
+.title-logo {
+    font-size: 1.8em;
+    font-family: "Merienda", cursive;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+    padding: 0;
+}
+
+.paragrafo-logo {
+    font-size: .6em;
+    font-family: "Merienda", cursive;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: var(--cor-secundaria)
+}
+
+.container-links {
+
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 500px;
+}
+
+.container-links a:hover {
+    background-color: var(--cor-secundaria);
+    border-radius: 12px;
+    color: var(--cor-terciaria);
+    padding: 5px;
+    transition: 0.5s;
+    transform: scale(1.06);
+
+}
+
+nav .container-links a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px;
+    color: var(--cor-secundaria);
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: "Merienda", cursive;
+
+}
+
+/*HEADER*/
+
+/*MENU HAMBURGUER*/
+
+.btn-abrir-menu i {
+    color: var(--cor-secundaria);
+    font-size: 30px;
+    display: none;
+}
+
+.menu-mobile {
+    background-color: var(--cor-terciaria);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu .overlay-menu {
+    display: block;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 1em;
+}
+
+.menu-mobile .btn-fechar i {
+    color: var(--cor-primaria);
+
+
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+    list-style: none;
+
+}
+
+.menu-mobile nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 20px 1em;
+    line-height: 2em;
+    color: var(--cor-secundaria);
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: "Merienda", cursive;
+
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #2c4918;
+    color: aliceblue;
+}
+
+.overlay-menu {
+    background-color: rgba(187, 187, 187, 0.719);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+}
+
+/*MENU HAMBURGUER*/
+
+/* ESTILO NO MAIN */
+
+.section-redes {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5em;
+    list-style-type: none;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+i {
+    font-size: 40px;
+    color: var(--cor-quartenaria);
+
+}
+
+i:hover {
+
+    color: var(--cor-terciaria);
+    transition: 0.5s;
+}
+
+
+.container-main {
+    background-image: url(imagens/fundo-verde.jpg);
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-prato img {
+    width: 350px;
+
+}
+
+.img-prato {
+    background-color: var(--cor-secundaria);
+    border-radius: 50% 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 50%;
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+
+}
+
+.img-prato h1 {
+    font-family: "Merienda", cursive;
+    color: var(--cor-terciaria);
+    font-size: 26px;
+    text-align: center;
+    line-height: 2em;
+}
+
+.apresentaçao {
+    width: 650px;
+    max-width: 1300px;
+    font-family: "Merienda", cursive;
+    align-items: center;
+
+}
+
+.title-apresentação {
+    font-family: "Lobster", sans-serif;
+    padding-bottom: 30px;
+    font-weight: 400;
+    font-size: 4.5em;
+    color: var(--cor-primaria);
+    line-height: 1em;
+    text-shadow: 0 5px 0px rgba(255, 255, 255, 0.945);
+
+
+}
+
+.paragrafo-apresentaçao {
+    font-size: 1.2em;
+    color: var(--cor-primaria);
+    line-height: 1.7em;
+    font-weight: bold;
+    font-family: "Merienda", cursive;
+}
+
+.link-botao:hover {
+    transform: scale(1.06);
+    transition: 0.5s;
+}
+
+.botao .link-botao {
+    background-color: var(--cor-primaria);
+    text-decoration: none;
+    padding: 12px;
+    display: inline-block;
+    margin-top: 1.5em;
+    font-size: 1.2em;
+    border-radius: 10px;
+    color: antiquewhite;
+    font-weight: bold;
+}
+
+/*SEÇÃO DE QUESTIONARIO*/
+.imagem-mulher img,
+.img-mulher-beneficios img {
+    width: 350px;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+.container-texto-imagem,
+.seçao-beneficios {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+.questionario {
+    background-color: var(--cor-terciaria);
+}
+
+.pergunta-escolha {
+    text-align: center;
+    font-family: "Merienda", cursive;
+    font-size: 40px;
+    color: var(--cor-secundaria);
+    padding-top: 100px;
+}
+
+.grid-container,
+.grid-beneficios {
+    display: grid;
+    grid-template-columns: 350px 350px;
+    gap: 40px;
+
+}
+
+.grid-item,
+.bloco-beneficios {
+    font-size: 1em;
+    text-align: center;
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    padding: 25px;
+    height: 100%;
+}
+
+.beneficios {
+    background-image: url(imagens/fundo-verde.jpg);
+    background-size: cover;
+}
+
+.bloco-beneficios {
+    background-color: var(--cor-terciaria);
+}
+
+.bloco-paragrafo {
+    font-family: "Merienda", cursive;
+    font-size: 1em;
+}
+
+
+
+h2 {
+    font-size: 1.5em;
+    font-family: "Merienda", cursive;
+    color: var(--cor-primaria);
+    padding-bottom: 10px;
+}
+.pergunta-escolha, .title-beneficios {
+    padding-bottom: 50px;
+
+}
+
+
+.title-beneficios {
+    text-align: center;
+    font-size: 2.5em;
+    padding-top: 5rem;
+    font-family: "Merienda", cursive;
+    color: var(--cor-primaria);
+}
+
+.container-receitas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 1300px;
+}
+
+.blocos-pratos {
+    background-color: var(--cor-terciaria);
+
+}
+
+.divisao-pratos img {
+    width: 100%;
+    background-position: fixed;
+    border-radius: 12px 12px 0 0;
+}
+
+.divisao-pratos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+ul li p {
+    font-family: "Merienda", cursive;
+    font-size: 14px;
+
+}
+
+.title-pratos {
+    text-align: center;
+    font-size: 2.5em;
+    padding: 4rem;
+    font-family: "Merienda", cursive;
+    color: var(--cor-primaria);
+}
+
+.estilo-letra-prato {
+    font-family: "Lobster", sans-serif;
+    padding-bottom: 0.5em;
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--cor-primaria);
+    line-height: 1em;
+}
+
+/*FLIP CARD*/
+
+.container-flip-card {
+    perspective: 1000px;
+    height: 455px;
+    padding: 12px;
+    text-align: center;
+    width: 280px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.5);
+    background-color: var(--cor-quartenaria);
+    cursor: pointer;
+}
+
+.flip-card {
+    width: 100%;
+    height: 430px;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+}
+
+.container-flip-card:hover .flip-card {
+    transform: rotateY(180deg);
+
+}
+
+.prato-frente,
+.prato-verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    font-size: 20px;
+    font-family: sans-serif;
+    border-radius: 12px;
+    list-style-type: none;
+
+
+}
+
+.prato-frente {
+    background-color: var(--cor-terciaria);
+
+}
+
+.prato-verso {
+    transform: rotateY(180deg);
+    padding-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    background-color: var(--cor-terciaria);
+    height: 100%;
+}
+
+
+.prato-verso h3 {
+    font-family: "Lobster", sans-serif;
+    padding-bottom: 16px;
+    font-weight: 200;
+    font-size: 24px;
+    color: var(--cor-primaria);
+}
+
+.prato-frente ul li,
+.prato-verso ul li {
+    list-style-type: none;
+}
+
+/*FLIP CARD*/
+
+/*SOBRE NÓS*/
+.section-sobre-nos {
+    background-image: url(imagens/fundo-verde.jpg);
+    background-size: cover;
+    padding-bottom: 100px;
+
+}
+
+.section-sobre-nos h1 {
+    text-align: center;
+    font-family: "Merienda", cursive;
+    font-size: 2.5em;
+    color: var(--cor-primaria);
+    padding: 2em 0;
+
+}
+
+.container-quem-somos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.texto-quem-somos, .container-texto-consultoria{
+    width: 500px;
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.container-quem-somos img {
+    width: 500px;
+    height: 300px;
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+
+}
+.container-quem-somos{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.container-consultoria {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.container-planos img {
+    width: 250px;
+    height: 400px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.container-planos img:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.container-texto-consultoria p, .texto-quem-somos p {
+    font-family: "Merienda", cursive;
+    font-size: 1em;
+}
+
+.container-planos {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 250px 250px 250px 250px;
+    justify-content: center;
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    transition: 0.5s;
+
+}
+
+.item {
+    background-color: var(--cor-terciaria);
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.mensagem-planos {
+    display: none;
+    font-family: "Merienda", cursive;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 5px;
+    transition: all 0.5s ease;
+    transition: 0.2s;
+}
+
+.container-texto-consultoria {
+    width: 500px;
+}
+
+video {
+    width: 500px;
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+}
+
+
+/*CONTATO*/
+.contato {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container-dados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 500px;
+    gap: 10px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: var(--cor-quartenaria);
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.title-contato{
+    font-size: 2.5em;
+    padding-bottom: 50px;
+    font-weight: bold;
+    font-family: "Merienda", cursive;
+    text-align: center;
+
+}
+.form-contato{
+    margin: 50px 0;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 16px;
+    border: none;
+    margin: 0 auto;
+    width: 80%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    outline: none;
+}
+
+button {
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--cor-secundaria);
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: "Merienda", cursive;
+    color: var(--cor-terciaria);
+    cursor: pointer;
+
+}
+
+button:hover {
+    opacity: 0.8;
+
+}
+
+/*FOOTER*/
+.footer {
+    background-image: url(imagens/fundo-verde.jpg);
+    background-size: cover;
+    padding: 120px 20px 50px 20px;
+    font-family: "Merienda", cursive;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 10px;
+
+}
+
+.footer-logo h2 {
+    color: var(--cor-secundaria);
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-container h3 {
+    color: var(--cor-primaria);
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-links a:hover {
+    color: var(--cor-terciaria);
+}
+
+.footer-container .section-redes i {
+    color: var(--cor-secundaria);
+}
+
+.footer-container .section-redes i:hover {
+    transform: scale(1.2);
+    color: var(--cor-terciaria);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: var(--cor-primaria);
+}
+
+
+
+
+/* RESPONSIVO PARA CELULAR */
+@media (max-width: 700px) {
+    .img-logo {
+        display: none;
+    }
+    .container-header {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 3;
+        height: 70px;
+    }
+
+    .paragrafo-logo {
+        font-size: 8px;
+    }
+
+    .title-logo {
+        font-size: 1.5em;
+    }
+
+    .container-links {
+        display: none;
+
+    }
+
+    .section-redes ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding-top: 100px;
+    }
+    
+    .img-prato{
+        position: static;
+        border-radius: 40px;
+        padding: 20px 5px;
+        width: 100%;
+    }
+
+
+    .apresentaçao {
+        width: 100vw;
+        padding: 20px;
+        margin-bottom: 120px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .title-apresentação{
+        font-size: 50px;
+    }
+
+    .container-title h1 {
+        font-size: 2.4em;
+    }
+
+    .paragrafo-apresentaçao {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .botao {
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-prato img {
+        width: 250px;
+        
+    }
+
+    .btn-abrir-menu i {
+        display: block;
+    }
+    .container-texto-imagem,
+    .seçao-beneficios{
+        display: flex;
+        flex-direction: column;
+    }
+    .grid-container,
+    .grid-beneficios{
+        grid-template-columns: 80vw;
+    }
+    .imagem-mulher,
+    .img-mulher-beneficios {
+        padding: 50px 0;
+
+    }
+    .container-texto-imagem img,
+    .seçao-beneficios img{
+        width: 300px;
+    }
+    .container-planos{
+        grid-template-columns: 250px;
+    }
+    .divisao-pratos{
+        grid-template-columns: repeat(1, 1fr)
+
+    }
+    .item img{
+        height: 350px;
+    }
+    .title-pratos{
+        padding: 50px 0;
+    }
+    .container-quem-somos,
+    .container-consultoria {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-quem-somos img, video{
+        width: 80vw;
+    }
+    .texto-quem-somos, .container-texto-consultoria{
+        width: 80vw;
+    }
+    .texto-quem-somos, .container-texto-consultoria {  
+        margin: 25px 0;
+    }
+    .container-quem-somos img, video{
+        margin-top: 25px;
+    }
+    .pergunta-escolha,
+    .title-beneficios, 
+    .title-pratos {
+        font-size: 24px;
+    }
+    .section-sobre-nos h1, .section-planos h1 {
+        font-size: 24px;
+    }
+    .container-dados{
+        width: 80vw;
+    }
+
+    .footer-social i{
+        font-size: 24px;
+    }
+    .title-contato{
+        font-size: 24px
+    }
+        
+}
+
+/* RESPONSIVO PARA TABLETES */
+
+@media (min-width:700px) and (max-width:1250px) {
+
+    .btn-abrir-menu {
+        display: none;
+    }
+
+    .title-logo {
+        font-size: 2em;
+    }
+
+    .paragrafo-logo {
+        font-size: 12px;
+    }
+
+    .container-header {
+        display: flex;
+        justify-content: center;
+        height: 100px;
+        margin: 8px;
+    }
+
+    .img-prato img {
+        width: 300px;
+    }
+
+    .apresentaçao {
+        width: 45vw;
+    }
+
+    .title-apresentação {
+        font-size: 3.5em;
+    }
+
+    .paragrafo-apresentaçao {
+        font-size: 16px;
+    }
+
+    .container-textos h1 {
+        font-size: 2em;
+    }
+
+    .divisao-pratos {
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+    }
+
+    .img-prato h1 {
+        font-size: 22px;
+    }
+
+    i {
+        font-size: 30px;
+    }
+
+    .estilo-letra-prato {
+        justify-content: center;
+    }
+
+    .imagem-mulher img,
+    .img-mulher-beneficios img {
+        width: 250px;
+
+    }
+
+    .grid-container,
+    .grid-beneficios {
+        grid-template-columns: 25vw 25vw;
+        gap: 20px;
+        font-size: 13px;
+    }
+
+    .grid-item,
+    .bloco-beneficios {
+        padding: 16px;
+    }
+
+    .grid-item h2 {
+        font-size: 18px;
+
+    }
+
+    .pergunta-escolha,
+    .title-beneficios {
+        font-size: 38px;
+    }
+    .container-quem-somos,
+    .container-consultoria {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-quem-somos{
+        flex-direction: column-reverse;
+    }
+
+    .texto-quem-somos, .container-texto-consultoria {  
+        margin: 25px 0;
+    }
+    .container-quem-somos img, video{
+        margin-top: 25px;
+    }
+    .container-planos{
+        grid-template-columns: 250px 250px;
+    }
+    .container-dados{
+        width: 50vw;
+    }
+
+
+}
+
+@media (min-width: 700px) and (max-width: 940px)  {
+    .descriçao-logo {
+        display: none;
+
+    }
+}
